@@ -1,5 +1,11 @@
-<ul>
-{% for res in results %}
-  <li>{{ res }}</li>
-{% endfor %}
-</ul>
+  <ul class='search-list'>
+    {% if results %}
+      <p class='results-label'>Results</p>
+    {% endif %}
+    {% for res in results %}
+      <li class='search-result'>
+        <p>{{ res }}</p>
+        <p>secondary info</p>
+      </li>
+    {% endfor %}
+  </ul>
