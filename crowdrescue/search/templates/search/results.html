@@ -1,5 +1,22 @@
-<ul>
-{% for res in results %}
-  <li>{{ res }}</li>
-{% endfor %}
-</ul>
+<table class="table" align="center">
+    <thead>
+        <th>Date</th>
+        <th>Handle</th>
+        <th>Text</th>
+        <th>Link</th>
+    </thead>
+    <tbody>
+        {% for q in results %}
+        <tr>
+            <td>{{ q.date }}</td>
+            <td>{{ q.handle }}</td>
+            <td>{{ q.text }}</td>
+            <td><a href="{{ q.link }}">{{ q.link }}</a></td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td>No results found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
