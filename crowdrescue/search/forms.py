@@ -14,8 +14,8 @@ class SearchForm(forms.Form):
         # return response --> this will send the dictionary over to the template
 
         return [{
-            "date": timezone.now(),
-            "handle": "@someone",
+            "created_at": timezone.now(),
+            "screen_name": "@someone",
             "text": "random test text",
-            "link": "http://example.com",
+            "source": "http://example.com",
         }]
