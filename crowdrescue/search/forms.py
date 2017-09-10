@@ -1,4 +1,6 @@
 from django import forms
+from django.http import request
+import json
 
 
 class SearchForm(forms.Form):
