@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -15,6 +16,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="http://crowdrescue.nationbuilder.com/themes/1/59adbe75c4b9f543df000000/0/attachments/15045589671504995449/default/theme.scss" type="text/css" />
   <link rel="stylesheet" href="http://crowdrescue.nationbuilder.com/themes/1/59adbe75c4b9f543df000000/0/attachments/15045589671504995449/default/tablet-and-desktop.scss" type="text/css" media="screen and (min-width: 768px)" />
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/search.css' %}">
 
   <!-- because ie8 ignores media queries, we need this -->
   <!--[if IE 8]>
@@ -131,7 +133,7 @@
 
               <ul class="footer-nav clearfix">
 
-                <li class="active">
+                <li class="active footer-welcome">
                   <a href="{% url 'home' %}">Welcome</a>
                 </li>
 

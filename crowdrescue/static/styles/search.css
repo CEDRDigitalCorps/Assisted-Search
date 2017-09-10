@@ -1,0 +1,38 @@
+#search-form {
+  padding-top: 15px;
+  margin-bottom: -10px;
+}
+
+.search-input {
+  margin-left: 20px;
+  width: 80%;
+  background-color: white;
+}
+
+.search-button {
+  width: 15%;
+  background-color: #c41230;
+  color: white;
+  margin-top: -2px;
+}
+
+@media only screen and (max-width: 542px) {
+  .search-button {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .search-input {
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .results-label {
+    width: 89%;
+  }
+
+  .search-result {
+    width: 89%;
+  }
+}
