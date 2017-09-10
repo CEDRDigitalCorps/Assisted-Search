@@ -8,10 +8,10 @@
     <tbody>
         {% for q in results %}
         <tr>
-            <td>{{ q.date }}</td>
-            <td>{{ q.handle }}</td>
+            <td>{{ q.created_at }}</td>
+            <td>{{ q.screen_name }}</td>
             <td>{{ q.text }}</td>
-            <td><a href="{{ q.link }}">{{ q.link }}</a></td>
+            <td><a href="{{ q.source }}">{{ q.source }}</a></td>
         </tr>
         {% empty %}
         <tr>
