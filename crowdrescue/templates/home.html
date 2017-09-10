@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    {% include "search/form.html" %}
+
+    <div id="results">
+        {% include "search/results.html" %}
+    </div>
+{% endblock content %}
+
+{% block page_js %}
+    <script src="{% static 'js/search.js' %}"></script>
+{% endblock page_js %}
