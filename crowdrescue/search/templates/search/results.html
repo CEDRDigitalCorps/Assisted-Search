@@ -1,4 +1,4 @@
-<table class="table" align="center">
+<table class="search-table table" align="center">
     <thead>
         <th>Date</th>
         <th>Handle</th>
@@ -7,7 +7,7 @@
     </thead>
     <tbody>
         {% for q in results %}
-        <tr>
+        <tr class='search-row'>
             <td>{{ q.date }}</td>
             <td>{{ q.handle }}</td>
             <td>{{ q.text }}</td>

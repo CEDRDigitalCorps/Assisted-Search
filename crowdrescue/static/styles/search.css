@@ -16,22 +16,19 @@
   margin-top: -2px;
 }
 
-.search-list {
-  list-style-type: none;
-}
-
-.search-result {
+.search-row {
   border: 1px solid rgba(0,0,0,0.1);;
   box-shadow: 3px 3px 2px #888888;
   width: 80%;
   border-radius: 10px;
-  text-align: center
+  text-align: center;
 }
 
-.result-label {
-  font-size: 120%;
+.search-table {
+  width: 80%;
+  float: left;
+  margin-left: 2%;
 }
-
 
 
 @media only screen and (max-width: 542px) {
