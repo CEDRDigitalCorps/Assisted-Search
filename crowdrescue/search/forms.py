@@ -1,4 +1,5 @@
 from django import forms
+from django.utils import timezone
 
 
 class SearchForm(forms.Form):
@@ -6,4 +7,9 @@ class SearchForm(forms.Form):
 
     def search(self):
         # TODO add hook to run the actual search
-        return [self.cleaned_data["query"]]
+        return [{
+            "date": timezone.now(),
+            "handle": "@someone",
+            "text": "random test text",
+            "link": "http://example.com",
+        }]
