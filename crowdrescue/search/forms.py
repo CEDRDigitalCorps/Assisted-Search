@@ -24,9 +24,10 @@ class SearchForm(forms.Form):
         # return response --> this will send the dictionary over to the template
         if self.cleaned_data["query_type"] == "bayesian":
             try:
-                spicey_bot = Spicey(bot_mode=True)
+                spicey_bot = Spicey(bot_mode=False)
                 results = spicey_bot(self.cleaned_data["query"])
-            except:
+            except Exception as e:
+                log.info(e)
                 results = [{"text": "Oops, an error occurred"}]
         else:
             return [{
