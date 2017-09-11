@@ -1,5 +1,10 @@
+import logging
+
 from django import forms
 from django.utils import timezone
+from spicey import Spicey
+
+log = logging.getLogger(__name__)
 
 
 class SearchForm(forms.Form):
@@ -18,15 +23,13 @@ class SearchForm(forms.Form):
         # response = json.loads(tweets)  # used if we need to deserialize the response
         # return response --> this will send the dictionary over to the template
         if self.cleaned_data["query_type"] == "bayesian":
-            # TODO run bayesian search
-            name = "@bayesian"
+            spicey_bot = Spicey(bot_mode=True)
+            results = spicey_bot(self.cleaned_data["query"])
         else:
-            # TODO run bayesian search
-            name = "@filter"
-
-        return [{
-            "created_at": timezone.now(),
-            "screen_name": name,
-            "text": "random test text",
-            "source": "http://example.com",
-        }]
+            return [{
+                "created_at": timezone.now(),
+                "screen_name": "@filter",
+                "text": "filtering is not operational at present",
+                "source": "http://example.com",
+            }]
+        return results
