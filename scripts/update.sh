@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 source /var/www/assistsearch/env/bin/activate
 cd /var/www/assistsearch/app
 git pull origin master

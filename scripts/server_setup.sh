@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 sudo apt-get update
 sudo apt-get install python-dev python-pip nginx
 sudo -H pip install --upgrade pip
