@@ -13,7 +13,7 @@ SECRET_KEY = 'evv114(05a&dxn+)l!k2eac^(^c%2s)#=oyyr0d*ys+_1*)x_i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["45.55.140.205"]
 
 
 # Application definition
@@ -112,3 +112,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "crowdrescue/static")
 ]
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
