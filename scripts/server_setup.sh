@@ -1,13 +1,17 @@
 #!/usr/bin/bash
-sudo yum -y update
-sudo yum install python-devel make automake nginx gcc gcc-c++ python-setuptools git
-sudo easy_install pip
-sudo pip install uwsgi virtualenv
-virtualenv /var/www/assistsearch/env
-
-git clone git@github.com:CrowdRescueHQ/Assisted-Search.git /var/www/assistsearch/app
+sudo apt-get update
+sudo apt-get install python-dev python-pip nginx
+sudo -H pip install --upgrade pip
+sudo -H pip install virtualenv uwsgi
+sudo mkdir -p /etc/uwsgi/sites
+sudo mkdir -p /var/log/uwsgi/apps
+sudo virtualenv /var/www/assistsearch/env
 . /var/www/assistsearch/env/bin/activate
-
-sudo cp /var/www/assistsearch/app/nginx.conf /etc/nginx/sites-enabled/assistsearch.conf
-sudo cp /var/www/assistsearch/app/uwsgi.conf /etc/uwsgi/apps/assistsearch.ini
-service nginx start
+git clone https://github.com/CrowdRescueHQ/Assisted-Search.git /var/www/assistsearch/app
+cd /var/www/assistsearch/
+pip install -r requirements/base.txt
+cp nginx.conf /etc/nginx/sites-enabled/assistsearch.conf
+cp uwsgi.ini /etc/uwsgi/sites/assistsearch.ini
+cp uwsgi.service /etc/systemd/system/uwsgi.service
+sudo systemctl restart nginx
+sudo systemctl start uwsgi
