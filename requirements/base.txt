@@ -2,4 +2,4 @@ Django==1.11.5
 psycopg2==2.7.3.1
 python-decouple==3.1
 requests==2.18.4
--e git+ssh://git@github.com/CrowdRescueHQ/media-slack-scraper.git#egg=spicey
+-e git+http://github.com/CrowdRescueHQ/media-slack-scraper.git#egg=spicey
