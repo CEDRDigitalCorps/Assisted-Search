@@ -23,8 +23,11 @@ class SearchForm(forms.Form):
         # response = json.loads(tweets)  # used if we need to deserialize the response
         # return response --> this will send the dictionary over to the template
         if self.cleaned_data["query_type"] == "bayesian":
-            spicey_bot = Spicey(bot_mode=True)
-            results = spicey_bot(self.cleaned_data["query"])
+            try:
+                spicey_bot = Spicey(bot_mode=True)
+                results = spicey_bot(self.cleaned_data["query"])
+            except:
+                results = [{"text": "Oops, an error occurred"}]
         else:
             return [{
                 "created_at": timezone.now(),
