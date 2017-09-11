@@ -23,7 +23,8 @@ Setup
 
    $ scripts/server_setup.sh
 
-Update:
+Update
+~~~~~~
 
 .. code-block:: bash
 
