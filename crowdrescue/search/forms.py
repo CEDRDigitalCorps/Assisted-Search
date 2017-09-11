@@ -14,7 +14,7 @@ class SearchForm(forms.Form):
             ("filter", "Filter"),
             ("bayesian", "Bayesian"),
         ],
-        initial="filter"
+        initial="bayesian"
     )
 
     def search(self):
@@ -25,9 +25,12 @@ class SearchForm(forms.Form):
         if self.cleaned_data["query_type"] == "bayesian":
             try:
                 spicey_bot = Spicey(bot_mode=False)
-                results = spicey_bot(self.cleaned_data["query"])
+                results = spicey_bot.bayesian_search(
+                    self.cleaned_data["query"]
+                )
             except Exception as e:
                 log.info(e)
+                print(e)
                 results = [{"text": "Oops, an error occurred"}]
         else:
             return [{
