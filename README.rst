@@ -42,8 +42,8 @@ NTLK Download
 
 .. code-block:: bash
 
-   $ python -m ntlk.download("punkt")
-   $ mv /root/ntlk_data /var/www/ntlk_data <-- if above command run as root
+   $ python -c "import nltk; nltk.download('punkt')"
+   $ mv /root/ntlk_data /var/www/ntlk_data <-- take note where the above command saved the files, and modify the ``/root/ntlk_data`` accordingly
 
 
 Update
