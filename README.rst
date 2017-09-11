@@ -31,7 +31,7 @@ Update
    $ sudo -i
    $ source /var/www/assistsearch/env/bin/activate
    $ cd /var/www/assistsearch/app
-   $ git clone origin master
+   $ git pull origin master
    $ python manage.py migrate
    $ python manage.py collectstatic --noinput
    $ chown -R www-data:www-data /var/www/assistsearch/app
