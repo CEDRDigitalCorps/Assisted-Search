@@ -28,3 +28,11 @@ class SearchView(FormView):
             self.template_name,
             context
         ).render()
+
+    def form_invalid(self, form):
+        response = super(SearchView, self).form_invalid(form)
+        if self.request.is_ajax():
+            return HttpResponse(
+                render_to_string("search/results.html", {"results": []})
+            )
+        return response
