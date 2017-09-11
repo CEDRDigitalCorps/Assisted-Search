@@ -18,7 +18,8 @@ class SearchView(FormView):
     def form_valid(self, form):
         data = form.search()
 
-        context = {"results": data}
+        context = self.get_context_data()
+        context["results"] = data
         if self.request.is_ajax():
             return HttpResponse(
                 render_to_string("search/results.html", context)

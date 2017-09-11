@@ -1,9 +1,9 @@
 <form id="search-form" method="POST" action="{% url 'search' %}">
     {% csrf_token %}
-    <input class='search-input' type="text" id="query" name="query" placeholder="Search" />
+    <input class='search-input' type="text" id="query" name="query" value="{{ form.query.value }}" placeholder="Search" />
     <select class="search-select" name="query_type">
-        <option value="filter">Filter</option>
-        <option value="bayesian">Bayesian</option>
+        <option value="filter" {% if form.query_type.value == "filter" %}selected=selected{% endif %}>Filter</option>
+        <option value="bayesian" {% if form.query_type.value == "bayesian" %}selected=selected{% endif %}>Bayesian</option>
     </select>
     <input class='search-button' type="submit" value="Search"/>
 </form>
