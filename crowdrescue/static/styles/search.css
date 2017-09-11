@@ -5,8 +5,12 @@
 
 .search-input {
   margin-left: 20px;
-  width: 80%;
+  width: 70%;
   background-color: white;
+}
+
+.search-select {
+    margin-top: -2px;
 }
 
 .search-button {
@@ -14,6 +18,15 @@
   background-color: #c41230;
   color: white;
   margin-top: -2px;
+}
+
+#search-form p {
+    text-align: center;
+}
+
+#search-form p input {
+    margin-left: 20px;
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 542px) {
@@ -26,6 +39,10 @@
     width: 100%;
     margin: 0px;
     text-align: center;
+  }
+
+  .search-select {
+      width: 100%;
   }
 
   .results-label {
