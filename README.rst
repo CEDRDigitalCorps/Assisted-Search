@@ -41,4 +41,4 @@ Update
    or
 
    $ sudo -i
-   $ scripts/update.sh
+   $ /var/www/assistsearch/app/scripts/update.sh
