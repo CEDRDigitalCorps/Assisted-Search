@@ -36,3 +36,18 @@
     width: 89%;
   }
 }
+
+#login-form {
+    padding: 20px;
+}
+
+#login-form button {
+    background: #c41230;
+    border-color: #c41230;
+    color: #fff;
+    padding: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
