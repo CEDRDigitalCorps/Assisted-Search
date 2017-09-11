@@ -68,3 +68,19 @@
     border-radius: 10px; /* future proofing */
     -khtml-border-radius: 10px; /* for old Konqueror browsers */
 }
+
+#results {
+    padding: 20px;
+}
+
+#results table th {
+    border-bottom: 2px solid #666;
+}
+
+#results table td {
+    border-bottom: 1px solid #ccc;
+}
+
+#results table tbody tr:hover {
+    background-color: #dcdcdc;
+}
