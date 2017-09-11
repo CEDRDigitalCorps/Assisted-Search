@@ -84,3 +84,7 @@
 #results table tbody tr:hover {
     background-color: #dcdcdc;
 }
+
+#spinner {
+    text-align: center;
+}
