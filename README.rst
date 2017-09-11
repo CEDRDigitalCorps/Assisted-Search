@@ -37,6 +37,15 @@ Setup
 
    $ scripts/server_setup.sh
 
+NTLK Download
+~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+   $ python -m ntlk.download("punkt")
+   $ mv /root/ntlk_data /var/www/ntlk_data <-- if above command run as root
+
+
 Update
 ~~~~~~
 
