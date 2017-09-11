@@ -112,3 +112,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "crowdrescue/static")
 ]
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = 'home'
