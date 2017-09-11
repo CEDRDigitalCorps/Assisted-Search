@@ -1,19 +1,12 @@
 $(function() {
-    var Search = function(qs) {
+    var url = $("#search-form").attr("action");
+    $("#query").on("keyup", function() {
         $.ajax({
             url: url,
             method: "POST",
-            data: {
-                "query": qs
-            }
+            data: $("#search-form").serialize()
         }).done(function(data) {
             $("#results").html(data);
         });
-    };
-
-    var url = $("#search-form").attr("action");
-    $("#query").on("keyup", function() {
-        var qs = $(this).val();
-        Search(qs);
     });
 });

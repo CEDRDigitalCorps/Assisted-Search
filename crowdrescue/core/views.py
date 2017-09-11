@@ -6,11 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
-
-
-decorators = [login_required(), csrf_exempt]
 
 
 @method_decorator(login_required, name="dispatch")
