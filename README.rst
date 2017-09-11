@@ -22,7 +22,14 @@ Twitter and Slack credentials are needed, create a ``settings.ini`` file with th
    [settings]
    TWITTER_KEY=<your-twitter-key>
    TWITTER_SECRET=<your-twitter-secret>
+   TWITTER_ACCESS_TOKEN=<your-twitter-access-token>
+   TWITTER_ACCESS_TOKEN_SECRET=<your-twitter-access-token-secret>
    SLACK_TOKEN=<your-slack-token>
+   DATABASE_NAME=<db-table>
+   DATABASE_HOST=
+   DATABASE_TABLE=<db-table>  <-- used by spicey
+   DATABASE_USER=<db-user>
+   DATABASE_PASSWORD=
 
 Replacing the ``<*>`` strings with relevant keys, secrets, and tokens
 
