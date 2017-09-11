@@ -59,9 +59,9 @@ Once we have a domain name we can set it up with the following changes;
 
     5. Lastly run the following to put the nginx conf file in place, and restart nginx;
 
-.. code-block:: bash
-
 On the server, do the following
+
+.. code-block:: bash
 
    $ sudo -i
    $ cp /var/www/assistsearch/app/nginx.conf
